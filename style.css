@@ -92,26 +92,101 @@ header h1 {
     height: 550px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color: white;
 }
 
 #homepage-content h1 {
     font-size: 80px;
+    font-family: 'Almarai', sans-serif;
     text-align: center;
     overflow: hidden;
     border-right: 1px solid orange;
     margin: 0 auto;
-    animation: typing 3.5s steps(40, end);
+    animation: shadows 1.7s ease-in infinite, move 1.7s ease-in infinite;
+}
+
+@keyframes shadows {
+    0% {
+        text-shadow: none;
+    }
+    10% {
+        text-shadow: 3px 3px rgb(241, 200, 145);
+    }
+    20% {
+        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112);
+    }
+    30% {
+        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60);
+    }
+    40% {
+        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60), 12px 12px rgb(241, 144, 16);
+    }
+    50% {
+        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60), 12px 12px rgb(241, 144, 16);
+    }
+    60% {
+        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60), 12px 12px rgb(241, 144, 16);
+    }
+    70% {
+        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60);
+    }
+    80% {
+        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112);
+    }
+    90% {
+        text-shadow: 3px 3px rgb(241, 200, 145);
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    40% {
+        transform: translate(-12px, -12px);
+    }
+    50% {
+        transform: translate(-12px, -12px);
+    }
+    60% {
+        transform: translate(-12px, -12px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+#homepage-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: white 5px dotted;
+}
+
+#homepage-subcontent {
+    display: flex;
+    justify-content: space-around;
+}
+
+#homepage-text {
+    width: 40%;
+}
+
+#homepage-text h2 {
+    overflow: hidden;
+    border-right: 1px solid orange;
+    animation: typing 2.5s steps(40, end);
 }
 
 @keyframes typing {
     from {width: 0}
-    to {width: 80%}
+    to {width: 100%}
 }
-
-
 
 .fancy-border {
     opacity: 0;
@@ -125,6 +200,25 @@ header h1 {
     z-index: -1;
     transition: opacity 0.7s;
 }
+
+@media screen and (max-width: 480px) {
+    #homepage-content h1 {
+        font-size: 40px;
+    }
+    #homepage-text {
+        width: 100%;
+    }
+    #homepage-subcontent {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .fancy-border {
+        opacity: 1;
+    }
+}
+
 
 
 /* style about section */
