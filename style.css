@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* style the fixed header section */
+#fixed-header img {
+    display: none;
+}
+
+#fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    width: 50%;
+}
+
+header h1 {
+    font-size: medium;
+    padding-left: 20px;
+}
+
+.nav-bar {
+    display: flex;
+    padding-left: 0;
+    padding-right: 20px;
+    justify-content: space-around;
+}
+
+.nav-bar li {
+    list-style-type: none;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    padding-left: 20px;
+    color:rgb(241, 200, 145);
+    text-shadow: 1px 1px rgb(243, 222, 194), 1px 2px rgb(243, 222, 194), 1px 3px rgb(243, 222, 194), 1px 4px rgb(243, 222, 194), 1px 5px rgb(243, 222, 194), 1px 6px rgb(243, 222, 194), 1px 7px rgb(243, 222, 194);
+}
+
+.nav-bar li a:hover {
+    transition: 0.3s;
+    transform: scale(1.1)translate(-50%, -50%);
+    text-shadow: 1px -1px rgb(243, 222, 194), 1px -2px rgb(243, 222, 194), 1px -3px rgb(243, 222, 194), 1px -4px rgb(243, 222, 194), 1px -5px rgb(243, 222, 194), 1px -6px rgb(243, 222, 194), 1px -7px rgb(243, 222, 194);
+  }
+  
+
+@media screen and (max-width: 480px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        right: 0;
+        top: 10px;
+        background-color: rgb(243, 222, 194);
+        height: 600px;
+        width: 100px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    #fixed-header img {
+        display: block;
+    }
+}
+
+
+/* style the home page content */
+#home-page-section {
+    height: 900px;
+}
+
+#homepage-content {
+    background-color: lightcoral;
+    margin: 90px 50px 50px 50px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 550px;
+}
+
+.fancy-border {
+    opacity: 0;
+    position: relative;
+    top: -565px;
+    right: -30px;
+    height: 550px;
+    margin: 50px;
+    border: black 5px dotted;
+    border-radius: 10px;
+    z-index: -1;
+    transition: opacity 0.7s;
+}
+
+/* style about section */
+#about-section {
+    text-align: center;
+    background-color: #f4e1d2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    height: 800px;
+    color: white;
+}
+
+#about-section h2 {
+    font-size: 50px;
+}
+
+#about-section p {
+    font-size: 1.5em;
+}
+
+/* style resume section */
+#resume-section {
+    background-color: #bc5a45;
+    margin: 300px 50px 50px 50px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 450px;
+}
+
+/* style project section */
+#project-section {
+    background-color:rgb(243, 222, 194);
+    margin: 300px 50px 50px 50px;
+    height: 600px;
+}
+
+#project-section h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+#project-blocks {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+#project-blocks li {
+    list-style-type: none;
+    border: solid 2px black;
+    height: 150px;
+    padding: 20px;
+}
+   
+/* style the links/footer section */
+#link-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#link-icons img {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+
+
