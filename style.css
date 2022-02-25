@@ -90,7 +90,28 @@ header h1 {
     padding: 20px;
     border-radius: 10px;
     height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
+
+#homepage-content h1 {
+    font-size: 80px;
+    text-align: center;
+    overflow: hidden;
+    border-right: 1px solid orange;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end);
+}
+
+@keyframes typing {
+    from {width: 0}
+    to {width: 80%}
+}
+
+
 
 .fancy-border {
     opacity: 0;
@@ -104,6 +125,7 @@ header h1 {
     z-index: -1;
     transition: opacity 0.7s;
 }
+
 
 /* style about section */
 #about-section {

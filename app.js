@@ -1,5 +1,6 @@
 $('#homepage-content').on('mouseover', ()=>{
     $('.fancy-border').css('opacity', '1');
+    $('homepage-content').css('transform', 'scale(1.5)');
 }).mouseleave(()=>{
     $('.fancy-border').css('opacity', '0');
 })
