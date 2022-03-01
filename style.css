@@ -111,6 +111,12 @@ nav {
         color:rgb(241, 200, 145);
         text-shadow: 1px 1px rgb(243, 222, 194), 1px 2px rgb(243, 222, 194), 1px 3px rgb(243, 222, 194), 1px 4px rgb(243, 222, 194), 1px 5px rgb(243, 222, 194), 1px 6px rgb(243, 222, 194), 1px 7px rgb(243, 222, 194);
     }
+
+    .hideen-nav-bar li a:hover {
+        transition: 0.3s;
+        transform: scale(1.1)translate(-50%, -50%);
+        text-shadow: 1px -1px rgb(243, 222, 194), 1px -2px rgb(243, 222, 194), 1px -3px rgb(243, 222, 194), 1px -4px rgb(243, 222, 194), 1px -5px rgb(243, 222, 194), 1px -6px rgb(243, 222, 194), 1px -7px rgb(243, 222, 194);
+    }
 }
 
 
@@ -257,11 +263,22 @@ nav {
     text-align: center;
     background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding: 50px;
     height: 600px;
     color: rgb(241, 200, 145);
+}
+
+#Ashlyn-hiking {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.about-content {
+    padding: 50px;
 }
 
 #about-section h2 {
@@ -282,7 +299,7 @@ nav {
 #skill-section {
     background: linear-gradient(70deg, #f4e1d2, rgb(241, 200, 145));
     padding: 40px;
-    height: 700px;
+    height: 1200px;
     color: white;
     text-align: center;
     display: flex;
@@ -331,6 +348,7 @@ nav {
     justify-content: space-around;
     padding-left: 0;
     position: relative;
+    perspective: 800px;
 }
 
 #project-blocks li {
@@ -339,28 +357,35 @@ nav {
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
     background: linear-gradient(70deg, rgb(241, 200, 145), lightcoral);
     display: flex;
     color: white;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     box-shadow: 3px 3px 5px lightgray;
     overflow: hidden;
+} 
+
+.view-project-btns button {
+    padding: 10px;
+    margin: 15px;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 3px 3px lightgrey;
 }
 
-.slide-in-card {
-    background-color: lightcoral;
+.view-project-btns button a {
+    text-decoration: none;
+    color: black;
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(0);
-      }    
+.view-project-btns button:hover {
+    transform: scale(1.08);
+    box-shadow: none;
 }
 
 /* style contact section */

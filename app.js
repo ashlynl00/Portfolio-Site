@@ -4,6 +4,11 @@ $('#logo').on('mouseover', ()=>{
     $('#logo').css('transform', 'scale(1)');
 })
 
+$('#menu').on('mouseover', ()=>{
+    $('#menu').css('transform', 'scale(1.2)');
+}).mouseleave(()=>{
+    $('#menu').css('transform', 'scale(1)');
+})
 
 let hamburgerCount = 0;
 // allow menu to appear at 480px or less
@@ -17,6 +22,12 @@ $('body').on('click','#menu', ()=>{
         $('.hidden-nav-bar').css('display', 'none');
     }
 });
+
+// whe you click responsive nav li, make nav disappear
+$('.hidden-nav-bar li a').on('click', ()=>{
+    $('.hidden-nav-bar').css('display', 'none');
+    hamburgerCount ++;
+})
 
 setTimeout( ()=>{
     $('#down-arrow').css('opacity', '1');
@@ -34,9 +45,9 @@ setTimeout( ()=>{
 // })
 
 // hover effect on project cards and submit btn in contact form
-$('#project-blocks li').on('mouseover', ()=>{
-    $('#project-blocks li').addClass('.slide-in-card');
-})
+$('.card').click(function(){
+    $('.card').toggleClass('flipped');
+});
 
 $('#input-submit').on('mouseover', ()=>{
     $('#input-submit').css('transform', 'scale(1.1)');
