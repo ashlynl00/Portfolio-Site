@@ -23,14 +23,25 @@ setTimeout( ()=>{
 }, 2500);
 
 // event handler for down arrow to display homepage subcontent
-let downArrowClickCount = 0;
-$('#down-arrow').on('click', ()=>{
-    downArrowClickCount ++;
-    if (downArrowClickCount % 2 !== 0) {
-        $('#homepage-subcontent').css('opacity', '1');
-    } else {
-        $('#homepage-subcontent').css('opacity', '0');
-    }
+// let downArrowClickCount = 0;
+// $('#down-arrow').on('click', ()=>{
+//     downArrowClickCount ++;
+//     if (downArrowClickCount % 2 !== 0) {
+//         $('#homepage-subcontent').css('opacity', '1');
+//     } else {
+//         $('#homepage-subcontent').css('opacity', '0');
+//     }
+// })
+
+// hover effect on project cards and submit btn in contact form
+$('#project-blocks li').on('mouseover', ()=>{
+    $('#project-blocks li').addClass('.slide-in-card');
+})
+
+$('#input-submit').on('mouseover', ()=>{
+    $('#input-submit').css('transform', 'scale(1.1)');
+}).mouseleave(()=>{
+    $('#input-submit').css('transform', 'scale(1)');
 })
 
 // get values from contact form
@@ -51,6 +62,50 @@ $('#input-submit').on('click', ()=>{
         $('#input-submit').val('Submit');
     }
 })
+
+// add focus for input fields and add blur to lose focus
+$('#input-fname').focus( ()=>{
+    console.log($(this));
+    $('#input-fname').css('background-color', 'rgb(241, 200, 145)');
+});
+
+$("#input-fname").blur(function(){
+    $('#input-fname').css("background-color", "white");
+});
+
+$('#input-lname').focus( ()=>{
+    $('#input-lname').css('background-color', 'rgb(241, 200, 145)');
+});
+
+$("#input-lname").blur(function(){
+    $('#input-lname').css("background-color", "white");
+});
+
+$('#input-email').focus( ()=>{
+    $('#input-email').css('background-color', 'rgb(241, 200, 145)');
+});
+
+$("#input-email").blur(function(){
+    $('#input-email').css("background-color", "white");
+});
+
+$('#input-subject').focus( ()=>{
+    $('#input-subject').css('background-color', 'rgb(241, 200, 145)');
+});
+
+$("#input-subject").blur(function(){
+    $('#input-subject').css("background-color", "white");
+});
+
+$('#input-message').focus( ()=>{
+    $('#input-message').css('background-color', 'rgb(241, 200, 145)');
+});
+
+$("#input-message").blur(function(){
+    $('#input-message').css("background-color", "white");
+});
+
+
 
 
 

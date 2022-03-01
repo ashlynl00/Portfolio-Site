@@ -67,7 +67,7 @@ nav {
     display: none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
     #menu {
         display: block;
         padding-top: 5px;
@@ -118,7 +118,7 @@ nav {
 
 
 #homepage-content {
-    background-color: lightcoral;
+    background: linear-gradient(70deg, lightcoral, rgb(241, 200, 145));
     margin-top: 60px;
     padding: 40px;
     height: 600px;
@@ -203,7 +203,16 @@ nav {
     display: flex;
     justify-content: flex-start;
     opacity: 0;
-    transition: opacity 1s ease-in;
+    animation: 2s ease-in 2.5s 1 appear forwards;
+}
+
+@keyframes appear {
+    0% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #homepage-content h2 {
@@ -271,7 +280,7 @@ nav {
 
 /* style resume section */
 #skill-section {
-    background-color: #f4e1d2;
+    background: linear-gradient(70deg, #f4e1d2, rgb(241, 200, 145));
     padding: 40px;
     height: 700px;
     color: white;
@@ -332,7 +341,7 @@ nav {
     text-align: center;
     width: 200px;
     height: 150px;
-    background-color: lightcoral;
+    background: linear-gradient(70deg, rgb(241, 200, 145), lightcoral);
     display: flex;
     color: white;
     align-items: center;
@@ -341,9 +350,22 @@ nav {
     overflow: hidden;
 }
 
+.slide-in-card {
+    background-color: lightcoral;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }    
+}
+
 /* style contact section */
 #contact-page {
-    background-color: lightcoral;
+    background: linear-gradient(70deg, lightcoral, rgb(241, 200, 145));
     color: white;
     height: 600px;
     padding: 60px;
@@ -402,6 +424,10 @@ form {
 
 #input-submit:hover {
     background-color: rgb(230, 38, 38);
+}
+
+input, textarea {
+    border: none;
 }
 
 @media screen and (max-width: 480px) {
