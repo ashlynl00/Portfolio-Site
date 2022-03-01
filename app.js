@@ -1,12 +1,13 @@
-$('.skill-container').on('mouseover', ()=>{
-    $('.skill-container').css('transform', 'scale(1.01)');
+$('#logo').on('mouseover', ()=>{
+    $('#logo').css('transform', 'scale(1.2)');
 }).mouseleave(()=>{
-    $('.skill-container').css('transform', 'scale(1)');
+    $('#logo').css('transform', 'scale(1)');
 })
+
 
 let hamburgerCount = 0;
 // allow menu to appear at 480px or less
-$('body').on('click','img', ()=>{
+$('body').on('click','#menu', ()=>{
     console.log('hello?');
     console.log(hamburgerCount);
     hamburgerCount++;
@@ -17,6 +18,20 @@ $('body').on('click','img', ()=>{
     }
 });
 
+setTimeout( ()=>{
+    $('#down-arrow').css('opacity', '1');
+}, 2500);
+
+// event handler for down arrow to display homepage subcontent
+let downArrowClickCount = 0;
+$('#down-arrow').on('click', ()=>{
+    downArrowClickCount ++;
+    if (downArrowClickCount % 2 !== 0) {
+        $('#homepage-subcontent').css('opacity', '1');
+    } else {
+        $('#homepage-subcontent').css('opacity', '0');
+    }
+})
 
 // get values from contact form
 $('#input-submit').on('click', ()=>{
@@ -32,8 +47,8 @@ $('#input-submit').on('click', ()=>{
     } else {
         console.log($fName+$lName+$email+$subject+$message);
         $('#contact-page').append('<p>Your message has been received! I will contact you soon!</p>');
-        let link = "mailto:ashlyn@downing.us" + $email + encodeURIComponent($subject) + encodeURIComponent($message);
-        window.location.href = link;
+        $('form :input').val('');
+        $('#input-submit').val('Submit');
     }
 })
 

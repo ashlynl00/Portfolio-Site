@@ -130,9 +130,8 @@ nav {
 }
 
 #homepage-content h1 {
-    font-size: 80px;
+    font-size: 60px;
     overflow: hidden;
-    border-right: 1px solid orange;
     /*animation: shadows 1.7s ease-in, move 1.7s ease-in;*/
 }
 
@@ -190,17 +189,21 @@ nav {
     }
 }
 
-#homepage-content img {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    border: white 5px dotted;
-    display: none;
+#homepage-beginning-content {
+    display: flex;
+    align-items: center;
+}
+
+#down-arrow {
+    opacity: 0;
+    width: 40px;
 }
 
 #homepage-subcontent {
     display: flex;
     justify-content: flex-start;
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
 
 #homepage-content h2 {
@@ -213,7 +216,7 @@ nav {
 
 @keyframes typing {
     from {width: 0}
-    to {width: 130px}
+    to {width: 100%}
 }
 
 @keyframes blink {
@@ -292,6 +295,7 @@ nav {
     padding: 20px;
     box-shadow: 3px 3px 5px lightgray;
 }
+
 
 /* style project section */
 #project-section {
