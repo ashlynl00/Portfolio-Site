@@ -5,19 +5,18 @@ $('.skill-container').on('mouseover', ()=>{
 })
 
 let hamburgerCount = 0;
-
-$(document).ready(()=>{
-    $('body').on('click','#menu', ()=>{
-        console.log('hello?');
-        console.log(hamburgerCount);
-        hamburgerCount++;
-        if (hamburgerCount % 2 !== 0) {
-            $('.nav-bar').css('opacity', '1');
-        } else {
-            $('.nav-bar').css('opacity', '0');
-        }
-    });
+// allow menu to appear at 480px or less
+$('body').on('click','img', ()=>{
+    console.log('hello?');
+    console.log(hamburgerCount);
+    hamburgerCount++;
+    if (hamburgerCount % 2 !== 0) {
+        $('.hidden-nav-bar').css('display', 'flex');
+    } else {
+        $('.hidden-nav-bar').css('display', 'none');
+    }
 });
+
 
 // get values from contact form
 $('#input-submit').on('click', ()=>{
