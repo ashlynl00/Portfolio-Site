@@ -8,7 +8,7 @@ $('#menu').on('mouseover', ()=>{
     $('#menu').css('transform', 'scale(1.2)');
 }).mouseleave(()=>{
     $('#menu').css('transform', 'scale(1)');
-})
+});
 
 let hamburgerCount = 0;
 // allow menu to appear at 480px or less
