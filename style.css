@@ -305,6 +305,32 @@ nav {
     height: 150px;
 }
    
+/* style contact section */
+#contact-page {
+    background-color: lightcoral;
+    color: white;
+    height: 600px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-page h1 {
+    font-size: 40px;
+}
+
+#contact-page p {
+    font-size: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+}
+
+
 /* style the links/footer section */
 #link-icons {
     display: flex;

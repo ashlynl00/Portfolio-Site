@@ -6,22 +6,37 @@ $('.skill-container').on('mouseover', ()=>{
 
 let hamburgerCount = 0;
 
-// if ($(window).width() < 480) {
-//     $('#fixed-header').on('click', ()=>{
-//         console.log('hello?');
-//         console.log(hamburgerCount);
-//         hamburgerCount++;
-//         if (hamburgerCount % 2 !== 0) {
-//             $('#homepage-content h1').css('opacity', '0.3');
-//             $('.nav-bar').css('opacity', '0.9');
-//             $('#fixed-header #hamburger, header').css('z-index', '5');
-//         } else {
-//             $('#homepage-content h1').css('opacity', '1');
-//             $('.nav-bar').css('opacity', '0');
-//             $('#fixed-header #hamburger, header').css('z-index', '5');
-//         }
-//      })
-// }
+$(document).ready(()=>{
+    $('body').on('click','#menu', ()=>{
+        console.log('hello?');
+        console.log(hamburgerCount);
+        hamburgerCount++;
+        if (hamburgerCount % 2 !== 0) {
+            $('.nav-bar').css('opacity', '1');
+        } else {
+            $('.nav-bar').css('opacity', '0');
+        }
+    });
+});
 
-console.log()
+// get values from contact form
+$('#input-submit').on('click', ()=>{
+    event.preventDefault();
+    console.log('clicked submit');
+    let $fName = $('#input-fname').val();
+    let $lName = $('#input-lname').val();
+    let $email = $('#input-email').val();
+    let $subject = $('#input-subject').val();
+    let $message = $('#input-message').val();
+    if ($fName == '' || $lName == '' || $email == '' || $subject == '' || $message == '') {
+        alert("Please fill required fields");
+    } else {
+        console.log($fName+$lName+$email+$subject+$message);
+        $('#contact-page').append('<p>Your message has been received! I will contact you soon!</p>');
+        let link = "mailto:ashlyn@downing.us" + $email + encodeURIComponent($subject) + encodeURIComponent($message);
+        window.location.href = link;
+    }
+})
+
+
 
