@@ -6,6 +6,37 @@ body {
     width: 100%;
 }
 
+#beginning-page {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#beginning-page img {
+    animation-iteration-count: 1;
+    animation: expand 5s;
+    height: 250px;
+    width: 250px;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(0);
+    }
+    70% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
 
 
 /* style the fixed header section */
@@ -180,7 +211,7 @@ nav {
     display: flex;
     justify-content: flex-start;
     opacity: 0;
-    animation: 3s ease-in 2.5s 1 appear forwards;
+    animation: 3s ease-in 8s 1 appear forwards;
 }
 
 /* create animation to make subcontent appear slowly when page loads */
@@ -199,7 +230,7 @@ nav {
     overflow: hidden;
     white-space: nowrap;
     border-right: 3px solid white;
-    animation: typing 2.5s steps(18, end) forwards, blink 1s infinite;
+    animation: 2.5s typing 5.5s steps(18, end) forwards, blink 1s infinite;
 }
 
 /* animations that will mimic typing effect */

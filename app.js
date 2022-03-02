@@ -1,3 +1,12 @@
+//
+setTimeout( ()=>{
+    $('#beginning-page').css({
+        'z-index': '-10',
+        'opacity': '0'
+    });
+}, 5000)
+
+
 // make the logo be bigger when you hover to let the user to to know to click
 
 $('#logo').on('mouseover', ()=>{
