@@ -27,11 +27,7 @@ $('body').on('click','#menu', ()=>{
 $('.hidden-nav-bar li a').on('click', ()=>{
     $('.hidden-nav-bar').css('display', 'none');
     hamburgerCount ++;
-})
-
-setTimeout( ()=>{
-    $('#down-arrow').css('opacity', '1');
-}, 2500);
+});
 
 // event handler for down arrow to display homepage subcontent
 // let downArrowClickCount = 0;
@@ -71,6 +67,7 @@ $('#input-submit').on('click', ()=>{
         $('#contact-page').append('<p>Your message has been received! I will contact you soon!</p>');
         $('form :input').val('');
         $('#input-submit').val('Submit');
+        //window.location = 'mailto:' + $email + '?subject=' + $subject + '&body=' +   $fName + $lName + $message;
     }
 })
 
@@ -116,7 +113,32 @@ $("#input-message").blur(function(){
     $('#input-message').css("background-color", "white");
 });
 
+// $(window).scrollTop(()=>{
 
+// }, 1)
+
+function firstBlink() {
+    $('#first-arrow').fadeOut(1000);
+    $('#first-arrow').fadeIn(1000);
+}
+
+function secondBlink() {
+    setTimeout( ()=>{
+        $('#second-arrow').fadeOut(1000);
+        $('#second-arrow').fadeIn(1000);
+    }, 500);
+}
+
+function thirdBlink() {
+    setTimeout( ()=>{
+        $('#third-arrow').fadeOut(1000);
+        $('#third-arrow').fadeIn(1000);
+    }, 1000);
+}
+
+setInterval(firstBlink, 2000);
+setInterval(secondBlink, 2000);
+setInterval(thirdBlink, 2000);
 
 
 

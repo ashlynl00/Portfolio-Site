@@ -119,10 +119,19 @@ nav {
     }
 }
 
+/* style the down arrow */
+.arrow {
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(243, 179, 96);
+    text-align: center;
+    margin: 80px;
+}
+
+.arrow h1 {
+    margin-bottom: -30px;
+}
 
 /* style the home page content */
-
-
 #homepage-content {
     background: linear-gradient(70deg, lightcoral, rgb(241, 200, 145));
     margin-top: 60px;
@@ -267,7 +276,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 50px;
-    height: 600px;
+    height: 800px;
     color: rgb(241, 200, 145);
 }
 
@@ -290,8 +299,30 @@ nav {
 }
 
 @media screen and (max-width: 480px) {
+    #about-section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 900px;
+    }
+
     #about-section h2 {
         font-size: 40px;
+    }
+
+    #Ashlyn-hiking {
+        width: 200px;
+        height: 250px;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #about-section {
+        height: 1300px;
     }
 }
 
@@ -299,7 +330,7 @@ nav {
 #skill-section {
     background: linear-gradient(70deg, #f4e1d2, rgb(241, 200, 145));
     padding: 40px;
-    height: 1200px;
+    height: 1300px;
     color: white;
     text-align: center;
     display: flex;
@@ -320,6 +351,36 @@ nav {
     width: 70%;
     padding: 20px;
     box-shadow: 3px 3px 5px lightgray;
+}
+
+#resume-link-btn {
+    width: 200px;
+    padding: 20px;
+    background-color: rgb(245, 174, 82);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+#resume-link-btn:hover {
+    transform: scale(1.1);
+}
+
+#resume-link-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    #skill-section {
+        height: 1400px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #skill-section {
+        height: 1600px;
+    }
 }
 
 /* style project section */
@@ -346,8 +407,6 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     padding-left: 0;
-    position: relative;
-    perspective: 800px;
 }
 
 #project-blocks li {
@@ -385,6 +444,17 @@ nav {
 .view-project-btns button:hover {
     transform: scale(1.08);
     box-shadow: none;
+}
+
+@media screen and (max-width: 300px) {
+    #project-blocks li {
+        width: 200px;
+        height: 270px;
+    }
+
+    #project-section {
+        height: 1300px;
+    }
 }
 
 /* style contact section */
@@ -455,9 +525,17 @@ input, textarea {
 }
 
 @media screen and (max-width: 480px) {
+    #contact-page {
+        height: 800px;
+    }
+    
     .left-contact {
         display: flex;
         flex-direction: column;
+    }
+
+    .left-contact input {
+        width: 200px;
     }
 
     .input-fields {
@@ -465,25 +543,32 @@ input, textarea {
         flex-direction: column;
         align-items: center;
     }
-    input {
-        width: 30px;
-    }
+
     #input-message {
-        width: 100px;
+        width: 200px;
     }
 }
 
 /* style the links/footer section */
+footer {
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+}
+
 #link-icons {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 #link-icons img {
-    width: 30px;
-    height: 30px;
-    padding: 10px;
+    width: 25px;
+    height: 25px;
+    padding: 15px;
 }
 
+#link-icons img:hover {
+    transform: scale(1.1);
+}
 
 
