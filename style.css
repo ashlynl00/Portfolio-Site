@@ -1,13 +1,14 @@
+/* create default styles for entire page */
+
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
     width: 100%;
 }
 
+
+
 /* style the fixed header section */
-#fixed-header #hamburger {
-    display: none;
-}
 
 #fixed-header {
     position: fixed;
@@ -63,9 +64,11 @@ nav {
     display: none;
 }
 
-.hidden-nav-bar {
+#hidden-nav-bar {
     display: none;
 }
+
+/* correct styling for tablets and smaller */
 
 @media screen and (max-width: 800px) {
     #menu {
@@ -85,7 +88,7 @@ nav {
         opacity: 0;
     }    
 
-    .hidden-nav-bar {
+    #hidden-nav-bar {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -101,25 +104,40 @@ nav {
         padding-left: 0;
     }
 
-    .hidden-nav-bar li {
+    #hidden-nav-bar li {
         list-style-type: none;
     }
     
-    .hidden-nav-bar li a {
+    #hidden-nav-bar li a {
         text-decoration: none;
         padding-left: 20px;
         color:rgb(241, 200, 145);
         text-shadow: 1px 1px rgb(243, 222, 194), 1px 2px rgb(243, 222, 194), 1px 3px rgb(243, 222, 194), 1px 4px rgb(243, 222, 194), 1px 5px rgb(243, 222, 194), 1px 6px rgb(243, 222, 194), 1px 7px rgb(243, 222, 194);
     }
 
-    .hideen-nav-bar li a:hover {
+    #hidden-nav-bar li a:hover {
         transition: 0.3s;
         transform: scale(1.1)translate(-50%, -50%);
         text-shadow: 1px -1px rgb(243, 222, 194), 1px -2px rgb(243, 222, 194), 1px -3px rgb(243, 222, 194), 1px -4px rgb(243, 222, 194), 1px -5px rgb(243, 222, 194), 1px -6px rgb(243, 222, 194), 1px -7px rgb(243, 222, 194);
     }
 }
 
-/* style the down arrow */
+/* correct styling for phones smaller than 300px */
+
+@media screen and (max-width: 300px) {
+    .nav-bar {
+        width: 0;
+    }
+    
+    #menu {
+        padding-right: 10px;
+    }
+}
+
+
+
+/* style the down arrow that is below the greeting page*/
+
 .arrow {
     font-family: 'Open Sans', sans-serif;
     color: rgb(243, 179, 96);
@@ -131,7 +149,10 @@ nav {
     margin-bottom: -30px;
 }
 
+
+
 /* style the home page content */
+
 #homepage-content {
     background: linear-gradient(70deg, lightcoral, rgb(241, 200, 145));
     margin-top: 60px;
@@ -146,62 +167,8 @@ nav {
 
 #homepage-content h1 {
     font-size: 60px;
-    overflow: hidden;
-    /*animation: shadows 1.7s ease-in, move 1.7s ease-in;*/
-}
-
-@keyframes shadows {
-    0% {
-        text-shadow: none;
-    }
-    10% {
-        text-shadow: 3px 3px rgb(241, 200, 145);
-    }
-    20% {
-        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112);
-    }
-    30% {
-        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60);
-    }
-    40% {
-        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60), 12px 12px rgb(241, 144, 16);
-    }
-    50% {
-        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60), 12px 12px rgb(241, 144, 16);
-    }
-    60% {
-        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60), 12px 12px rgb(241, 144, 16);
-    }
-    70% {
-        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112), 9px 9px rgb(243, 164, 60);
-    }
-    80% {
-        text-shadow: 3px 3px rgb(241, 200, 145), 6px 6px rgb(243, 186, 112);
-    }
-    90% {
-        text-shadow: 3px 3px rgb(241, 200, 145);
-    }
-    100% {
-        text-shadow: none;
-    }
-}
-
-@keyframes move {
-    0% {
-        transform: translate(0px, 0px);
-    }
-    40% {
-        transform: translate(-12px, -12px);
-    }
-    50% {
-        transform: translate(-12px, -12px);
-    }
-    60% {
-        transform: translate(-12px, -12px);
-    }
-    100% {
-        transform: translate(0px, 0px);
-    }
+    font-family: 'Kaushan Script', cursive;
+    color: #5a2f2f;
 }
 
 #homepage-beginning-content {
@@ -209,17 +176,14 @@ nav {
     align-items: center;
 }
 
-#down-arrow {
-    opacity: 0;
-    width: 40px;
-}
-
 #homepage-subcontent {
     display: flex;
     justify-content: flex-start;
     opacity: 0;
-    animation: 2s ease-in 2.5s 1 appear forwards;
+    animation: 3s ease-in 2.5s 1 appear forwards;
 }
+
+/* create animation to make subcontent appear slowly when page loads */
 
 @keyframes appear {
     0% { 
@@ -234,20 +198,25 @@ nav {
     width: 0;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 1px solid orange;
-    animation: typing 2.5s steps(18, end) forwards, blink 0.9s infinite;
+    border-right: 3px solid white;
+    animation: typing 2.5s steps(18, end) forwards, blink 1s infinite;
 }
+
+/* animations that will mimic typing effect */
 
 @keyframes typing {
     from {width: 0}
     to {width: 100%}
 }
 
+/* create cursor blinking effect */
+
 @keyframes blink {
     from {border-color: transparent} 
-    to {border-color: orange;}
+    to {border-color: white;}
 }
 
+/* correct styling for homepage mobile phones */
 
 @media screen and (max-width: 480px) {
     #homepage-content h1 {
@@ -256,7 +225,7 @@ nav {
     #homepage-text {
         width: 100%;
     }
-    #home-page-section {
+    #homepage-section {
         width: 100%;
     }
     #homepage-subcontent {
@@ -267,7 +236,10 @@ nav {
     }
 }
 
+
+
 /* style about section */
+
 #about-section {
     text-align: center;
     background-color: white;
@@ -286,7 +258,7 @@ nav {
     border-radius: 20px;
 }
 
-.about-content {
+#about-content {
     padding: 50px;
 }
 
@@ -297,6 +269,8 @@ nav {
 #about-section p {
     font-size: 1.5em;
 }
+
+/* correct styling for about section for phones */
 
 @media screen and (max-width: 480px) {
     #about-section {
@@ -315,18 +289,28 @@ nav {
         height: 250px;
     }
 
-    .about-content {
+    #about-content {
         padding: 20px;
     }
 }
 
+/* correct styling for smaller phone screens for the about section */
+
 @media screen and (max-width: 300px) {
     #about-section {
         height: 1300px;
+        padding: 20px;
+    }
+
+    #about-content p{
+        font-size: 10px;
     }
 }
 
+
+
 /* style resume section */
+
 #skill-section {
     background: linear-gradient(70deg, #f4e1d2, rgb(241, 200, 145));
     padding: 40px;
@@ -371,11 +355,15 @@ nav {
     color: white;
 }
 
+/* correct styling for skills section for phones */
+
 @media screen and (max-width: 480px) {
     #skill-section {
         height: 1400px;
     }
 }
+
+/* correct styling for skills section for smallerphones */
 
 @media screen and (max-width: 300px) {
     #skill-section {
@@ -383,7 +371,10 @@ nav {
     }
 }
 
+
+
 /* style project section */
+
 #project-section {
     background-color:white;
     height: 1100px;
@@ -446,6 +437,8 @@ nav {
     box-shadow: none;
 }
 
+/* correct styling for project section for smaller phones */
+
 @media screen and (max-width: 300px) {
     #project-blocks li {
         width: 200px;
@@ -457,7 +450,10 @@ nav {
     }
 }
 
+
+
 /* style contact section */
+
 #contact-page {
     background: linear-gradient(70deg, lightcoral, rgb(241, 200, 145));
     color: white;
@@ -524,6 +520,8 @@ input, textarea {
     border: none;
 }
 
+/* correct styling for contact section for phones */
+
 @media screen and (max-width: 480px) {
     #contact-page {
         height: 800px;
@@ -549,11 +547,16 @@ input, textarea {
     }
 }
 
+
+
 /* style the links/footer section */
+
 footer {
     background-color: transparent;
     position: fixed;
     bottom: 0;
+    width: 100%;
+    opacity: 0.9;
 }
 
 #link-icons {
@@ -571,4 +574,17 @@ footer {
     transform: scale(1.1);
 }
 
+/* correct styling for skills section for phones */
+
+@media screen and (max-width: 480px) {
+    #link-icons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #link-icons img {
+        width: 20px;
+        height: 20px;
+    }    
+}
 

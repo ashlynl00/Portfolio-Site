@@ -1,8 +1,13 @@
+// make the logo be bigger when you hover to let the user to to know to click
+
 $('#logo').on('mouseover', ()=>{
     $('#logo').css('transform', 'scale(1.2)');
 }).mouseleave(()=>{
     $('#logo').css('transform', 'scale(1)');
 })
+
+
+// make the menu appear larger on hover to let the user know they can click it
 
 $('#menu').on('mouseover', ()=>{
     $('#menu').css('transform', 'scale(1.2)');
@@ -10,40 +15,34 @@ $('#menu').on('mouseover', ()=>{
     $('#menu').css('transform', 'scale(1)');
 });
 
+
+
+// display the hidden nav bar when clicked
+
+// keep count to num of times clicked so it closes or opens correctly on click
 let hamburgerCount = 0;
-// allow menu to appear at 480px or less
+
 $('body').on('click','#menu', ()=>{
-    console.log('hello?');
-    console.log(hamburgerCount);
     hamburgerCount++;
     if (hamburgerCount % 2 !== 0) {
-        $('.hidden-nav-bar').css('display', 'flex');
+        $('#hidden-nav-bar').css('display', 'flex');
     } else {
-        $('.hidden-nav-bar').css('display', 'none');
+        $('#hidden-nav-bar').css('display', 'none');
     }
 });
 
-// whe you click responsive nav li, make nav disappear
-$('.hidden-nav-bar li a').on('click', ()=>{
-    $('.hidden-nav-bar').css('display', 'none');
+
+
+// when you click on an item in the hidden nav, it will close and direct the user to that part of the page
+
+$('#hidden-nav-bar li a').on('click', ()=>{
+    $('#hidden-nav-bar').css('display', 'none');
     hamburgerCount ++;
 });
 
-// event handler for down arrow to display homepage subcontent
-// let downArrowClickCount = 0;
-// $('#down-arrow').on('click', ()=>{
-//     downArrowClickCount ++;
-//     if (downArrowClickCount % 2 !== 0) {
-//         $('#homepage-subcontent').css('opacity', '1');
-//     } else {
-//         $('#homepage-subcontent').css('opacity', '0');
-//     }
-// })
 
-// hover effect on project cards and submit btn in contact form
-$('.card').click(function(){
-    $('.card').toggleClass('flipped');
-});
+
+// on hover make the submit button of contact page appear larger to invite user to click
 
 $('#input-submit').on('mouseover', ()=>{
     $('#input-submit').css('transform', 'scale(1.1)');
@@ -51,7 +50,10 @@ $('#input-submit').on('mouseover', ()=>{
     $('#input-submit').css('transform', 'scale(1)');
 })
 
+
+
 // get values from contact form
+
 $('#input-submit').on('click', ()=>{
     event.preventDefault();
     console.log('clicked submit');
@@ -63,7 +65,7 @@ $('#input-submit').on('click', ()=>{
     if ($fName == '' || $lName == '' || $email == '' || $subject == '' || $message == '') {
         alert("Please fill required fields");
     } else {
-        console.log($fName+$lName+$email+$subject+$message);
+        // clear input fields and show success message
         $('#contact-page').append('<p>Your message has been received! I will contact you soon!</p>');
         $('form :input').val('');
         $('#input-submit').val('Submit');
@@ -71,7 +73,10 @@ $('#input-submit').on('click', ()=>{
     }
 })
 
-// add focus for input fields and add blur to lose focus
+
+
+// when user clicks on input field to type, add focus and make it disappear when they are no longer focusing
+
 $('#input-fname').focus( ()=>{
     console.log($(this));
     $('#input-fname').css('background-color', 'rgb(241, 200, 145)');
@@ -113,9 +118,8 @@ $("#input-message").blur(function(){
     $('#input-message').css("background-color", "white");
 });
 
-// $(window).scrollTop(()=>{
 
-// }, 1)
+// add blinking arrows
 
 function firstBlink() {
     $('#first-arrow').fadeOut(1000);
