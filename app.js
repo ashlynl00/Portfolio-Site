@@ -63,24 +63,24 @@ $('#input-submit').on('mouseover', ()=>{
 
 // get values from contact form
 
-$('#input-submit').on('click', ()=>{
-    event.preventDefault();
-    console.log('clicked submit');
-    let $fName = $('#input-fname').val();
-    let $lName = $('#input-lname').val();
-    let $email = $('#input-email').val();
-    let $subject = $('#input-subject').val();
-    let $message = $('#input-message').val();
-    if ($fName == '' || $lName == '' || $email == '' || $subject == '' || $message == '') {
-        alert("Please fill required fields");
-    } else {
-        // clear input fields and show success message
-        $('#contact-page').append('<p>Your message has been received! I will contact you soon!</p>');
-        $('form :input').val('');
-        $('#input-submit').val('Submit');
-        //window.location = 'mailto:' + $email + '?subject=' + $subject + '&body=' +   $fName + $lName + $message;
-    }
-})
+// $('#input-submit').on('click', ()=>{
+//     event.preventDefault();
+//     console.log('clicked submit');
+//     let $fName = $('#input-fname').val();
+//     let $lName = $('#input-lname').val();
+//     let $email = $('#input-email').val();
+//     let $subject = $('#input-subject').val();
+//     let $message = $('#input-message').val();
+//     if ($fName == '' || $lName == '' || $email == '' || $subject == '' || $message == '') {
+//         alert("Please fill required fields");
+//     } else {
+//         // clear input fields and show success message
+//         $('#contact-page').append('<p>Your message has been received! I will contact you soon!</p>');
+//         $('form :input').val('');
+//         $('#input-submit').val('Submit');
+//         //window.location = 'mailto:' + $email + '?subject=' + $subject + '&body=' +   $fName + $lName + $message;
+//     }
+// })
 
 
 
