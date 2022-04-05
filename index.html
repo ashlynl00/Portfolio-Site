@@ -81,7 +81,7 @@
                 <h2>Experience</h2>
                 <p>Software Engineering Bootcamp Student, Instructor at Wilderness Awareness School, and Merchandise Associate at Target.</p>
             </div>
-            <button id="resume-link-btn"><a href="./Ashlyn Lanaville- 2021_Resume.pdf" target="_blank">View More</a></button>
+            <button id="resume-link-btn"><a href="./Ashlyn Lanaville Resume copy.pdf" target="_blank">View More</a></button>
     </section>
     <section id="project-section">
         <h1>Projects</h1>
@@ -115,19 +115,20 @@
     <section id="contact-page">
         <h1>Get In Touch</h1>
         <p>I am currently looking for opportunities to grow. Feel free to reach out to me and connect!</p>
-        <form>
+        <form method="POST" name="contact_form" action="https://formsubmit.co/ashlyn@downing.us">
             <div class="input-fields">
                 <div class="left-contact">
-                    <input type="text" id="input-fname" placeholder="First Name">
-                    <input type="email" id="input-lname" placeholder="Last Name">
-                    <input type="text" id="input-email" placeholder="Email">
-                    <input type="text" id="input-subject" placeholder="Subject">
+                    <input type="text" id="input-fname" placeholder="First Name" name="fname" required>
+                    <input type="text" id="input-lname" placeholder="Last Name" name="lname" required>
+                    <input type="email" id="input-email" placeholder="Email" name="email" required>
+                    <input type="text" id="input-subject" placeholder="Subject" name="subject" required>
                 </div>
                 <div class="right-contact">
-                    <textarea name="Message" type="text" id="input-message" placeholder="Message"></textarea>
+                    <textarea name="Message" type="text" id="input-message" placeholder="Message" name="message"></textarea>
                 </div>
             </div>
-            <input type="submit" id="input-submit" value="Submit">
+            <button type="submit" id="input-submit" value="Submit">Submit</button>
+            <!-- <input type="submit" id="input-submit" value="Submit"> -->
         </form>
     </section>
     <footer>
