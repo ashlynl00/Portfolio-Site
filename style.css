@@ -109,6 +109,7 @@ nav {
         height: 40px;
         width: 40px;
         z-index: 4;
+        cursor: pointer;
     }
 
     #fixed-header {
@@ -295,6 +296,7 @@ nav {
 
 #about-section h2 {
     font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
 }
 
 #about-section p {
@@ -303,12 +305,12 @@ nav {
 
 /* correct styling for about section for phones */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
     #about-section {
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-around;
-        height: 900px;
+        height: 1200px;
     }
 
     #about-section h2 {
@@ -321,7 +323,11 @@ nav {
     }
 
     #about-content {
-        padding: 20px;
+        padding: 10px;
+    }
+
+    #about-content p {
+        font-size: 1.25em;
     }
 }
 
@@ -329,12 +335,7 @@ nav {
 
 @media screen and (max-width: 300px) {
     #about-section {
-        height: 1300px;
-        padding: 20px;
-    }
-
-    #about-content p{
-        font-size: 10px;
+        height: 2000px;
     }
 }
 
@@ -408,7 +409,7 @@ nav {
 
 #project-section {
     background-color:white;
-    height: 1100px;
+    height: 1200px;
     margin-top: -20px;
     color: rgb(241, 200, 145);
     padding: 20px;
@@ -433,12 +434,11 @@ nav {
 
 #project-blocks li {
     list-style-type: none;
-    height: 150px;
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
     width: 250px;
-    height: 200px;
+    height: 250px;
     background: linear-gradient(70deg, rgb(241, 200, 145), lightcoral);
     display: flex;
     color: white;
@@ -541,6 +541,7 @@ form {
     padding: 10px;
     background-color: rgb(233, 87, 87);
     box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
 }
 
 #input-submit:hover {
