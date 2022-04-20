@@ -409,7 +409,7 @@ nav {
 
 #project-section {
     background-color:white;
-    height: 1200px;
+    height: 1000px;
     margin-top: -20px;
     color: rgb(241, 200, 145);
     padding: 20px;
@@ -427,18 +427,20 @@ nav {
 
 #project-blocks {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding-left: 0;
 }
 
 #project-blocks li {
     list-style-type: none;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
+    margin-left: 20px;
     text-align: center;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     background: linear-gradient(70deg, rgb(241, 200, 145), lightcoral);
     display: flex;
     color: white;
@@ -448,6 +450,11 @@ nav {
     box-shadow: 3px 3px 5px lightgray;
     overflow: hidden;
 } 
+
+.project-img {
+    width: 250px;
+    height: 200px;
+}
 
 .view-project-btns button {
     padding: 10px;
@@ -470,14 +477,29 @@ nav {
 
 /* correct styling for project section for smaller phones */
 
-@media screen and (max-width: 300px) {
-    #project-blocks li {
-        width: 200px;
-        height: 270px;
+@media screen and (max-width: 1000px) {
+    #project-blocks {
+        display: flex;
+        flex-direction: column;
     }
 
     #project-section {
-        height: 1300px;
+        height: 1400px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #project-blocks li {
+        width: 200px;
+        height: 250px;
+    }
+    .project-img {
+        width: 200px;
+        height: 150px;
+    }
+    .view-project-btns {
+        display: flex;
+        flex-direction: row;
     }
 }
 
