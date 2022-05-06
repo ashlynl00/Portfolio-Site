@@ -81,14 +81,14 @@ nav {
 .nav-bar li a {
     text-decoration: none;
     padding-left: 20px;
-    color:rgb(247, 187, 110);
-    text-shadow: 1px 1px rgb(243, 222, 194), 1px 2px rgb(243, 222, 194), 1px 3px rgb(243, 222, 194), 1px 4px rgb(243, 222, 194), 1px 5px rgb(243, 222, 194), 1px 6px rgb(243, 222, 194), 1px 7px rgb(243, 222, 194);
+    color:rgb(241, 186, 114);
+    text-shadow: 1px 1px rgb(241, 228, 210), 1px 2px rgb(241, 228, 210), 1px 3px rgb(241, 228, 210), 1px 4px rgb(241, 228, 210), 1px 5px rgb(241, 228, 210), 1px 6px rgb(241, 228, 210), 1px 7px rgb(241, 228, 210);
 }
 
 .nav-bar li a:hover {
     transition: 0.3s;
     transform: scale(1.1)translate(-50%, -50%);
-    text-shadow: 1px -1px rgb(243, 222, 194), 1px -2px rgb(243, 222, 194), 1px -3px rgb(243, 222, 194), 1px -4px rgb(243, 222, 194), 1px -5px rgb(243, 222, 194), 1px -6px rgb(243, 222, 194), 1px -7px rgb(243, 222, 194);
+    text-shadow: 1px -1px rgb(241, 228, 210), 1px -2px rgb(241, 228, 210), 1px -3px rgb(241, 228, 210), 1px -4px rgb(241, 228, 210), 1px -5px rgb(241, 228, 210), 1px -6px rgb(241, 228, 210), 1px -7px rgb(241, 228, 210);
 }
   
 #menu {
@@ -143,14 +143,14 @@ nav {
     #hidden-nav-bar li a {
         text-decoration: none;
         padding-left: 20px;
-        color:rgb(241, 200, 145);
-        text-shadow: 1px 1px rgb(243, 222, 194), 1px 2px rgb(243, 222, 194), 1px 3px rgb(243, 222, 194), 1px 4px rgb(243, 222, 194), 1px 5px rgb(243, 222, 194), 1px 6px rgb(243, 222, 194), 1px 7px rgb(243, 222, 194);
+        color:rgb(241, 186, 114);
+        text-shadow: 1px 1px rgb(241, 228, 210), 1px 2px rgb(241, 228, 210), 1px 3px rgb(241, 228, 210), 1px 4px rgb(241, 228, 210), 1px 5px rgb(241, 228, 210), 1px 6px rgb(241, 228, 210), 1px 7px rgb(241, 228, 210);
     }
 
     #hidden-nav-bar li a:hover {
         transition: 0.3s;
         transform: scale(1.1)translate(-50%, -50%);
-        text-shadow: 1px -1px rgb(243, 222, 194), 1px -2px rgb(243, 222, 194), 1px -3px rgb(243, 222, 194), 1px -4px rgb(243, 222, 194), 1px -5px rgb(243, 222, 194), 1px -6px rgb(243, 222, 194), 1px -7px rgb(243, 222, 194);
+        text-shadow: 1px -1px rgb(241, 228, 210), 1px -2px rgb(241, 228, 210), 1px -3px rgb(241, 228, 210), 1px -4px rgb(241, 228, 210), 1px -5px rgb(241, 228, 210), 1px -6px rgb(241, 228, 210), 1px -7px rgb(241, 228, 210);
     }
 }
 
@@ -344,7 +344,7 @@ nav {
 /* style resume section */
 
 #skill-section {
-    background: linear-gradient(70deg, #f4e1d2, rgb(241, 200, 145));
+    background-color: white;
     padding: 40px;
     height: 1300px;
     color: white;
@@ -357,11 +357,12 @@ nav {
 
 #skill-section h1 {
     font-size: 40px;
+    color: rgb(241, 200, 145);
 }
 
 .skill-container {
-    background-color: white;
-    color: rgb(241, 200, 145);
+    background-color: rgb(241, 200, 145);
+    color: white;
     margin: 40px;
     border-radius: 10px;
     width: 70%;
@@ -408,7 +409,7 @@ nav {
 /* style project section */
 
 #project-section {
-    background-color:white;
+    background: linear-gradient(70deg, #f4e1d2, rgb(245, 207, 157));
     height: 1000px;
     margin-top: -20px;
     color: rgb(241, 200, 145);
@@ -423,6 +424,7 @@ nav {
     text-align: center;
     padding: 30px;
     font-size: 40px;
+    color: white;
 }
 
 #project-blocks {
